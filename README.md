@@ -1,6 +1,7 @@
-# Name
+# 100 Days of Learn Rust in a Month of Lunches
 
-Overview
+This is 100-day Code challenge for Rust.
+The material to be used will be "[Learn Rust in a Month of Lunches](https://www.manning.com/books/learn-rust-in-a-month-of-lunches)".
 
 ## Description
 
