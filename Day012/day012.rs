@@ -8,6 +8,9 @@ fn main() {
     let string3 = String::from("String::from");
     println!("{}", string3);
     
-    let string4 = "format!()";
-    println!("{}", format!("{}, This is Macro.", string4));
+    let string4:String = "into()".into();
+    println!("{}", string4);
+    
+    let string5 = "format!()";
+    println!("{}", format!("{}", string5));
 }
