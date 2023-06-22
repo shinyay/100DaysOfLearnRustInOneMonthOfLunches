@@ -11,7 +11,7 @@ Many others are used in much the same way as programming languages. Parentheses 
 ```rust
 fn main() {
     let today = "Thursday";
-    if today == "Sunday" {
+    if today == "Sunday" || today == "Saturday" {
         println!("It's holiday.");
     } else if today == "Friday" {
         println!("It's TGIF!");
