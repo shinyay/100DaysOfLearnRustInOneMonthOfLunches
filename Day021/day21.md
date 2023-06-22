@@ -23,7 +23,11 @@ fn main() {
 
 You can use `match` instead of `if`.
 
-- `match`: put the name of the item to match against, and then a `{}` code block.
+- `match`: put the name of the item to match against, and then a `{}` code block
+- `=>`: fat arrow to say what to do when it matches
+  - the pattern on the left of the fat arrow
+- **arm**: Each line is called
+
 
 ```rust
 fn main() {
