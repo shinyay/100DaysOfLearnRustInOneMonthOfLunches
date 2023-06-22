@@ -63,6 +63,8 @@ You can use a **turple** for `match`
 ```rust
 fn match_colours(rgb: (i32, i32, i32)) {
     match rgb {
+        (0, 0, 0) => println!("Black"),
+        (255, 255, 255) => println!("White"),
         (r, _, _) if r < 10 => println!("Not much red"),
         (_, g, _) if g < 10 => println!("Not much green"),
         (_, _, b) if b < 10 => println!("Not much blue"),
@@ -74,11 +76,14 @@ fn main() {
     let first = (200, 0, 0);
     let second = (50, 50, 50);
     let third = (200, 50, 0);
+    let forth = (0, 0, 0);
+    let fifth = (255, 255, 255);
  
     match_colours(first);
     match_colours(second);
     match_colours(third);
- 
+    match_colours(forth);
+    match_colours(fifth);
 }
 ```
 
