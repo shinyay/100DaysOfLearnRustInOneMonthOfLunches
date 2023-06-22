@@ -91,3 +91,6 @@ fn main() {
 - [Rust Playground](https://play.rust-lang.org/?version=stable&mode=debug&edition=2021&gist=8d15b47faa592d1aafddca8be33cb607)
 
 ## Key Takeaways
+
+The basic "if" in the control flow is the same as in other languages, so everyone can use it without making mistakes.
+On the other hand, match is also useful in a variety of ways, including support for the "turple" method and the "match guard" method, which declares an "if" inside the match.
