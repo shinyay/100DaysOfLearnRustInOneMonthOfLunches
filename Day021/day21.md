@@ -42,4 +42,20 @@ fn main() {
 }
 ```
 
+You can declare a value with `match`
+
+```rust
+fn main() {
+    let today: u8 = 30;
+    let msg = match today {
+        0 => "No such day.",
+        1 => "it's the first day",
+        15 => "it's the middle of the month.",
+        30 => "it's the end of the month.",
+        _ => "It's some other day",
+    };
+    println!("{msg}");
+}
+```
+
 ## Key Takeaways
