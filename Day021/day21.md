@@ -58,4 +58,30 @@ fn main() {
 }
 ```
 
+You can use a **turple** for `match`
+
+```rust
+fn match_colours(rgb: (i32, i32, i32)) {
+    match rgb {
+        (r, _, _) if r < 10 => println!("Not much red"),
+        (_, g, _) if g < 10 => println!("Not much green"),
+        (_, _, b) if b < 10 => println!("Not much blue"),
+        _ => println!("Each colour has at least 10"),
+    }
+}
+ 
+fn main() {
+    let first = (200, 0, 0);
+    let second = (50, 50, 50);
+    let third = (200, 50, 0);
+ 
+    match_colours(first);
+    match_colours(second);
+    match_colours(third);
+ 
+}
+```
+
+- [Rust Playground](https://play.rust-lang.org/?version=stable&mode=debug&edition=2021&gist=8d15b47faa592d1aafddca8be33cb607)
+
 ## Key Takeaways
