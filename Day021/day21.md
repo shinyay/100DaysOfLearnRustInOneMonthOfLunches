@@ -21,4 +21,21 @@ fn main() {
 }
 ```
 
+You can use `match` instead of `if`.
+
+- `match`: put the name of the item to match against, and then a `{}` code block.
+
+```rust
+fn main() {
+    let today: u8 = 30;
+    match today {
+        0 => println!("No such day."),
+        1 => println!("it's the first day"),
+        15 => println!("it's the middle of the month."),
+        30 => println!("it's the end of the month."),
+        _ => println!("It's some other day"),
+    }
+}
+```
+
 ## Key Takeaways
