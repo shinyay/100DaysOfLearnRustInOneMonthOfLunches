@@ -27,7 +27,7 @@ You can use `match` instead of `if`.
 - `=>`: fat arrow to say what to do when it matches
   - the pattern on the left of the fat arrow
 - **arm**: Each line is called
-
+- put a comma between the arms (not a semicolon)
 
 ```rust
 fn main() {
