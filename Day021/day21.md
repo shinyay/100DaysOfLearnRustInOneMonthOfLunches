@@ -58,7 +58,8 @@ fn main() {
 }
 ```
 
-You can use a **turple** for `match`
+You can use a **turple** for `match`.
+And you can add `if` inside of `match`. It is called `Match Guard`.
 
 ```rust
 fn match_colours(rgb: (i32, i32, i32)) {
