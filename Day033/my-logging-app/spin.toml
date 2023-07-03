@@ -5,6 +5,9 @@ name = "my-logging-app"
 trigger = { type = "http", base = "/" }
 version = "0.1.0"
 
+[variables]
+loglevel = { required = true }
+
 [[component]]
 id = "my-logging-app"
 source = "target/wasm32-wasi/release/my_logging_app.wasm"
