@@ -17,3 +17,5 @@ route = "/..."
 [component.build]
 command = "cargo build --target wasm32-wasi --release"
 watch = ["src/**/*.rs", "Cargo.toml"]
+[component.config]
+loglevel = "{{ loglevel }}"
