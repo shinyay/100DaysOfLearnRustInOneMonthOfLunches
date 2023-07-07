@@ -1,4 +1,4 @@
-FROM rust:1.70-slim-bullseye as build
+FROM --platform=$BUILDPLATFORM rust:1.70-slim-bullseye as build
 
 COPY Cargo.toml .
 COPY Cargo.lock .
