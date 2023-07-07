@@ -9,6 +9,6 @@ RUN cargo build --target wasm32-wasi --release
 
 FROM scratch
 
-COPY --from=build /target/wasm32-wasi/release/wasm-on-docker.wasm hello.wasm
+COPY --from=build /target/wasm32-wasi/release/wasm-on-docker.wasm /hello.wasm
 
-ENTRYPOINT [ "/hello.wasm" ]
+ENTRYPOINT [ "hello.wasm" ]
