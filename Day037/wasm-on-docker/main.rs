@@ -1,3 +1,3 @@
-fun main() {
+fn main() {
     println!("Hello, WebAssembly");
 }
