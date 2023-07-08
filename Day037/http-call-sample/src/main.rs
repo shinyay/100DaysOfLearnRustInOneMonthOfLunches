@@ -1,5 +1,5 @@
-#[tokio::main]
-async fn main() {
+#[tokio::main(flavor = "current_thread")]
+async fn main() {}
     match get("http://httpbin.org/get").await {
         Ok(response) => {
             let result = response.json::<GetBody>().await;
