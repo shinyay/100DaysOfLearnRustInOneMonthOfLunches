@@ -8,6 +8,6 @@ RUN RUSTFLAGS='-C target-feature=+crt-static' cargo build --release
 
 FROM scratch
 
-COPY --from=build /target/wasm32-wasi/release/wasm-on-docker /native
+COPY --from=build /target/release/wasm-on-docker /native
 
 ENTRYPOINT [ "native" ]
