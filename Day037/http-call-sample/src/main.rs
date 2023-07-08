@@ -1,3 +1,7 @@
+use std::collections::HashMap;
+use reqwest::get;
+use serde::{Serialize, Deserialize};
+
 #[tokio::main(flavor = "current_thread")]
 async fn main() {
     match get("http://httpbin.org/get").await {
