@@ -1,0 +1,16 @@
+spin_manifest_version = "1"
+authors = ["shinyay <shinya.com@gmail.com>"]
+description = "This App is completely sample for Day 39."
+name = "my-day39-app"
+trigger = { type = "http", base = "/" }
+version = "0.1.0"
+
+[[component]]
+id = "my-day39-app"
+source = "target/wasm32-wasi/release/my_day39_app.wasm"
+allowed_http_hosts = []
+[component.trigger]
+route = "/..."
+[component.build]
+command = "cargo build --target wasm32-wasi --release"
+watch = ["src/**/*.rs", "Cargo.toml"]
