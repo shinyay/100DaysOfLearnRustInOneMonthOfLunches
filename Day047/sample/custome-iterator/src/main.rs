@@ -31,7 +31,7 @@ impl Iterator for BookCollection {
     fn next(&mut self) -> Option<Self::Item> {
         match self.0.pop() {
             Some(book) => {
-                println!("Selected book: {}", book);
+                println!("Selected book: [{}]", book);
                 Some(book)
             }
             None => None
