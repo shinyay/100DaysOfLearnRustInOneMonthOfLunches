@@ -4,7 +4,7 @@ struct Library {
     books: BookCollection,
 }
 
-#[derive(Debug)]
+#[derive(Debug, Clone)]
 struct BookCollection(Vec<String>);
 
 impl Library {
@@ -17,6 +17,10 @@ impl Library {
 
     fn add_book(&mut self, book: &str) {
         self.books.0.push(book.to_string());
+    }
+
+    fn get_book(&mut self) -> BookCollection {
+        self.books.clone()
     }
 }
 
