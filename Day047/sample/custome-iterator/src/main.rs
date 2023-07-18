@@ -1,19 +1,22 @@
 #[derive(Debug)]
 struct Library {
     name: String,
-    books: Vec<String>,
+    books: BookCollection,
 }
+
+#[derive(Debug)]
+struct BookCollection(Vec<String>);
 
 impl Library {
     fn new(name: &str) -> Self { 
         Self { 
             name: name.to_string(), 
-            books: Vec::new(),
+            books: BookCollection(Vec::new()),
         }
     }
 
     fn add_book(&mut self, book: &str) {
-        self.books.push(book.to_string());
+        self.books.0.push(book.to_string());
     }
 }
 
