@@ -31,7 +31,7 @@ impl Iterator for BookCollection {
     fn next(&mut self) -> Option<Self::Item> {
         match self.0.pop() {
             Some(book) => {
-                println!("The book is: {}", book);
+                println!("Selected book: {}", book);
                 Some(book)
             }
             None => None
@@ -46,6 +46,9 @@ fn main() {
     my_library.add_book("Rust in Action");
     my_library.add_book("Rust for Dummy");
 
+    for book in my_library.get_book() {
+        println!("{}", book);
+    }
 
     println!("My Library: {my_library:?}");
 }
