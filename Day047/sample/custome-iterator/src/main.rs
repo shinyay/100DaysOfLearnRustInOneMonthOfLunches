@@ -24,7 +24,28 @@ impl Library {
     }
 }
 
+// Custom Itarator Implementation
+impl Iterator for BookCollection {
+    type Item = String;
+
+    fn next(&mut self) -> Option<Self::Item> {
+        match self.0.pop() {
+            Some(book) => {
+                println!("The book is: {}", book);
+                Some(book)
+            }
+            None => None
+        }
+    }
+    
+}
+
 fn main() {
-    let my_library = Library::new("Rust");
+    let mut my_library = Library::new("Rust");
+    my_library.add_book("Rust in Practice");
+    my_library.add_book("Rust in Action");
+    my_library.add_book("Rust for Dummy");
+
+
     println!("My Library: {my_library:?}");
 }
