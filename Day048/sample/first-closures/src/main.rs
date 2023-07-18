@@ -1,3 +1,4 @@
 fn main() {
-    println!("Hello, world!");
+    let my_closure = || println!("Hello, Closure!");
+    my_closure();
 }
