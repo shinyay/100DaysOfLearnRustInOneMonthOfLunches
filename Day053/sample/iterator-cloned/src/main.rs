@@ -6,5 +6,5 @@ fn main() {
 
     println!("{:?}", cloned_vec);
     println!("{:?}", mapped_vec);
-
+    assert_eq!(cloned_vec, my_vec);
 }
