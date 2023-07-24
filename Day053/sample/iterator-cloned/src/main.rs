@@ -5,5 +5,6 @@ fn main() {
     let mapped_vec = my_vec.iter().map(|x| x).collect::<Vec<_>>();
 
     println!("{:?}", cloned_vec);
+    println!("{:?}", mapped_vec);
 
 }
