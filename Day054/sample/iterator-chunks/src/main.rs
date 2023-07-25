@@ -8,4 +8,9 @@ fn main() {
     for chunk in my_slice.chunks(5) {
         println!("{:?}", chunk);
     }
+
+    println!("Window size: 5");
+    for iter in my_slice.windows(5) {
+        println!("{:?}", iter);
+    }
 }
