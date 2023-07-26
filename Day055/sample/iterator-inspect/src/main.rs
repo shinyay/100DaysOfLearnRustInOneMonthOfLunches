@@ -6,7 +6,7 @@ fn main() {
         .filter(|x| x % 2 == 0)
         .fold(0, |sum, i| sum + i);
     
-    println!("{sum}");
+    println!("Result without inspect: {sum}");
     
     let sum = my_vec.iter()
         .cloned()
@@ -15,5 +15,5 @@ fn main() {
         .inspect(|x| println!("Current item through Filter: {x}"))
         .fold(0, |sum, i| sum + i);
     
-    println!("{sum}");
+        println!("Result with inspect: {sum}");
 }
