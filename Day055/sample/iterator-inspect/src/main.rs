@@ -16,4 +16,19 @@ fn main() {
         .fold(0, |sum, i| sum + i);
     
         println!("Result with inspect: {sum}");
+
+    let sum = my_vec.iter()
+        .cloned()
+        .inspect(|x| {
+            match x % 2 {
+                0 => println!("Even: {}", x),
+                _ => println!("Odd: {}", x),
+            }
+            println!("Current item: {x}");
+        })
+        .filter(|x| x % 2 == 0)
+        .inspect(|x| println!("Current item through Filter: {x}"))
+        .fold(0, |sum, i| sum + i);
+    
+    println!("Result with inspect: {sum}");
 }
