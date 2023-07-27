@@ -3,7 +3,7 @@ fn main() {
 }
 
 fn dangle() -> &String {
-    let my_string = String::from("hello");
+    let my_string = String::from("Hello");
 
     &my_string
 }
