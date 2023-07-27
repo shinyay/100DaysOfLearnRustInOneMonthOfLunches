@@ -2,7 +2,7 @@ fn main() {
     let reference_to_nothing = dangle();
 }
 
-fn dangle() -> &'static String {
+fn dangle() -> & String {
     let my_string = String::from("Hello");
 
     &my_string
