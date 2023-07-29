@@ -24,6 +24,7 @@ fn main() {
     };
 
     println!("{:?}", me);
+    dbg!(&me);
     println!("{}", me);
     me.say_hello();
 }
