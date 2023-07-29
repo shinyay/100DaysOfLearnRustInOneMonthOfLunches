@@ -5,10 +5,10 @@ struct Person {
 }
  
 fn main() {
-    let people_vec = vec!["Yanagihara", "John"];
+    let people_vec = vec!["Yanagihara".to_string(), "John".to_string()];
 
     let me = Person {
-        name: people_vec[0],
+        name: &people_vec[0],
         age: 30,
     };
 
