@@ -44,4 +44,6 @@ fn main() {
     println!("BookInfo:{}", my_book);
 
     println!("{:?}", my_book);
+
+    println!("[Sale] Unwrapped value: {}", my_book.sale.into_inner());
 }
