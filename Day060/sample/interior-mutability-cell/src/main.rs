@@ -15,10 +15,18 @@ impl Book {
 
 impl Display for Book {
     fn fmt(&self, f: &mut Formatter<'_>) -> Result {
-        write!(f, "")
+        write!(f, "Title: {} | Price: {} | Sale: {}", self.title, self.price, self.sale)
     }
 }
 
 fn main() {
-    println!("Hello, world!");
+    let my_book = Book {
+        author: "Shinya Yanagihara".to_string(),
+        title: "Rust for Beginners".to_string(),
+        category: "Rust".to_string(),
+        price: 980,
+        sale: false,
+    };
+
+    println!("BookInfo:{}", my_book);
 }
