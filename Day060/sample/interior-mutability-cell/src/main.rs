@@ -1,4 +1,13 @@
-use std::fmt::{Display, Formatter, Result};
+use std::{fmt::{Display, Formatter, Result}, cell::Cell};
+
+// #[derive(Debug)]
+// struct Book {
+//     author: String,
+//     title: String,
+//     category: String,
+//     price: u32,
+//     sale: bool,
+// }
 
 #[derive(Debug)]
 struct Book {
@@ -6,7 +15,7 @@ struct Book {
     title: String,
     category: String,
     price: u32,
-    sale: bool,
+    sale: Cell<bool>,
 }
 
 impl Book {
@@ -15,7 +24,7 @@ impl Book {
 
 impl Display for Book {
     fn fmt(&self, f: &mut Formatter<'_>) -> Result {
-        write!(f, "Title: {} | Price: {} | Sale: {}", self.title, self.price, self.sale)
+        write!(f, "Title: {} | Price: {} | Sale: {}", self.title, self.price, self.sale.get())
     }
 }
 
@@ -25,8 +34,10 @@ fn main() {
         title: "Rust for Beginners".to_string(),
         category: "Rust".to_string(),
         price: 980,
-        sale: false,
+        sale: Cell::new(false),
     };
+
+    my_book.sale.set(true);
 
     println!("BookInfo:{}", my_book);
 }
