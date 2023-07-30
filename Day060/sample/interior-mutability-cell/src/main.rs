@@ -37,7 +37,11 @@ fn main() {
         sale: Cell::new(false),
     };
 
+    println!("{:?}", my_book);
+
     my_book.sale.set(true);
 
     println!("BookInfo:{}", my_book);
+
+    println!("{:?}", my_book);
 }
