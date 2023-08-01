@@ -37,4 +37,8 @@ fn main() {
         sale: RefCell::new(false),
     };
     println!("{:?}", my_book);
+
+    my_book.sale.replace(true);
+    println!("{:?}", my_book);
+
 }
