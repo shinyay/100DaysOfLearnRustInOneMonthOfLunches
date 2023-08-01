@@ -23,4 +23,11 @@ fn main() {
     }
 
     println!("your_mutex: {:?}", your_mutex);
+
+    let our_mutex = Mutex::new(10);
+    let mut mutex_changer = our_mutex.lock().unwrap();
+    *mutex_changer *= 100;
+    println!("your_mutex: {:?}", our_mutex);
+    drop(mutex_changer);
+    println!("your_mutex: {:?}", our_mutex);
 }
