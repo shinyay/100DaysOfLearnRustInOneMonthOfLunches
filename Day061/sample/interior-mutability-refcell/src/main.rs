@@ -41,4 +41,8 @@ fn main() {
     my_book.sale.replace(true);
     println!("{:?}", my_book);
 
+    let publication_date = 2010;
+    my_book.sale.replace_with(|_| if publication_date < 2010 { true } else { false });
+    println!("{:?}", my_book);
+
 }
