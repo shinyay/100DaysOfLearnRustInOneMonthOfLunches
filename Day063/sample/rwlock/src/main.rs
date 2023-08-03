@@ -12,5 +12,8 @@ fn main() {
     let mut my_write = my_rwlock.write().unwrap();
     *my_write += 1;
 
+    // This program outputs `data: <locked>` forever withoud `drop()`
+    drop(my_write);
+
     println!("{:?}", my_rwlock);
 }
