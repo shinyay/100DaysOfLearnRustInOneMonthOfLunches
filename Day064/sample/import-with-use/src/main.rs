@@ -31,7 +31,27 @@ fn select_month(month: &Month) {
     }
 }
 
+fn select_month_refined(month: &Month) {
+    use Month::*;
+
+    let winter = "Winter";
+    let spring = "Spring";
+    let summer = "Summer";
+    let fall = "Fall";
+
+    match month {
+        January => println!("{winter}"),
+        February => println!("{winter}"),
+        March => println!("{spring}"),
+        _ => println!("Etc."),
+        
+    }
+}
+
 fn main() {
     let month = Month::January;
     select_month(&month);
+
+    let month = Month::March;
+    select_month_refined(&month);
 }
