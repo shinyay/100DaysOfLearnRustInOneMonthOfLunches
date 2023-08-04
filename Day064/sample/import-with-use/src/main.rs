@@ -63,6 +63,22 @@ fn select_month_abbreviation(month: &Month) {
         November as NOV,
         December as DEC,
     };
+
+    match month {
+        JAN => println!("It's Winter."),
+        FEB => println!("It's Winter."),
+        MAR => println!("It's Spring."),
+        APR => println!("It's Spring."),
+        MAY => println!("It's Spring."),
+        JUN => println!("It's Summer."),
+        JUL => println!("It's Summer."),
+        AUG => println!("It's Summer."),
+        SEP => println!("It's Fall."),
+        OCT => println!("It's Fall."),
+        NOV => println!("It's Fall."),
+        DEC => println!("It's Winter."),
+        _ => println!("Etc."),
+    }
 }
 
 fn main() {
