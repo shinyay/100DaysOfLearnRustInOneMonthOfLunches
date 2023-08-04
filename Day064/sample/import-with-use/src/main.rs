@@ -48,6 +48,23 @@ fn select_month_refined(month: &Month) {
     }
 }
 
+fn select_month_abbreviation(month: &Month) {
+    use Month::{
+        January as JAN,
+        February as FEB,
+        March as MAR,
+        April as APR,
+        May as MAY,
+        June as JUN,
+        July as JUL,
+        August as AUG,
+        September as SEP,
+        October as OCT,
+        November as NOV,
+        December as DEC,
+    };
+}
+
 fn main() {
     let month = Month::January;
     select_month(&month);
