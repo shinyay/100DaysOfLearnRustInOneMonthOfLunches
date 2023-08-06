@@ -13,9 +13,9 @@ enum BookCategory {
  
 fn register_book() -> Book {
     Book {
-        name: (),
-        author: (),
-        price: ()
+        name: todo!(),
+        author: todo!(),
+        price: todo!()
     }
 }
 
