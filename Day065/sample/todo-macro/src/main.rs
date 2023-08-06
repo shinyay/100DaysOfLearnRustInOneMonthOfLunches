@@ -1,4 +1,8 @@
-struct Book {}
+struct Book {
+    name: String,
+    author: String,
+    price: u32,
+}
 
 enum BookCategory {
     Mistery,
@@ -7,6 +11,14 @@ enum BookCategory {
     Technology,
 }
  
+fn register_book() -> Book {
+    Book {
+        name: (),
+        author: (),
+        price: ()
+    }
+}
+
 fn get_book(book: &Book) -> Option<String> {
     todo!()
 } 
