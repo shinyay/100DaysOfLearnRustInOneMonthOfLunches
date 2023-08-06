@@ -7,9 +7,13 @@ enum BookCategory {
     Technology,
 }
  
-fn get_book(book: &Book) -> Option<String> {} 
+fn get_book(book: &Book) -> Option<String> {
+    todo!()
+} 
 
-fn delete_book(book: &Book) -> Result<(), String> {} 
+fn delete_book(book: &Book) -> Result<(), String> {
+    todo!()
+} 
 
 fn check_book_category(book_category: &BookCategory) {
     match book_category {
