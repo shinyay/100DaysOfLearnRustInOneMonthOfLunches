@@ -21,6 +21,6 @@ fn check_book_category(book_category: &BookCategory) {
 }
  
 fn main() {
-    let book_type = BookType::HardCover;
-    check_book_type(&book_type);
+    let book_category = BookCategory::Technology;
+    check_book_category(&book_category);
 }
