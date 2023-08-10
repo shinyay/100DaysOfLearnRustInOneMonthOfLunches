@@ -4,6 +4,6 @@ fn main() {
             println!("[{}] Hello, thread!", count)
         });
 
-        my_hundle.join();
+        my_hundle.join().unwrap();
     }
 }
