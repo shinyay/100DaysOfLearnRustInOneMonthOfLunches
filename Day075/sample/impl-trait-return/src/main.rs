@@ -15,5 +15,6 @@ fn get_my_trait_impl() -> impl MyTrait {
 }
 
 fn main() {
-    
+    let my_trait_impl = get_my_trait_impl();
+    my_trait_impl.do_something();
 }
