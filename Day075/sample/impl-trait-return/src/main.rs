@@ -10,6 +10,10 @@ impl MyTrait for MyStruct {
     }    
 }
 
-fn main() {
+fn get_my_trait_impl() -> impl MyTrait {
+    MyStruct
+}
 
+fn main() {
+    
 }
