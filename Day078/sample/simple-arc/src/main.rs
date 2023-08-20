@@ -1,17 +1,22 @@
 use std::{sync::Arc, thread};
 
 fn main() {
-    let data = vec![1, 2, 3, 4, 5];
-    let shared_data = Arc::new(data);
+    let data = Arc::new(vec![1, 2, 3, 4, 5]);
 
-    let thread1_data = shared_data.clone();
+    let cloned_data = data.clone();
+
     let thread1 = thread::spawn(move || {
-        println!("[Thread1] {:?}", thread1_data);
+        for value in cloned_data.iter() {
+            println!("[Thread1: doubled-data] {:?}", value * 2);
+        }
     });
 
-    let thread2_data = shared_data.clone();
+    let cloned_data = data.clone();
+
     let thread2 = thread::spawn(move || {
-        println!("[Thread2] {:?}", thread2_data);
+        for value in cloned_data.iter() {
+            println!("[Thread2: tripled-data] {:?}", value * 3);
+        }
     });
 
     thread1.join().unwrap();
