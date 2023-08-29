@@ -22,6 +22,16 @@ fn main() {
         "You've got this!",
         "Stay positive and keep going.",
         "You're capable of amazing things.",
+        "Keep your chin up!",
+        "You're making progress, even if it doesn't feel like it.",
+        "You're on the right track.",
+        "You're a true inspiration.",
+        "Your efforts will pay off.",
+        "Believe in your dreams.",
+        "You're a fighter!",
+        "You're not defined by your past.",
+        "Stay focused and never give up.",
+        "You're a shining star.",
     ];
 
     let name = args.get(1).cloned();
