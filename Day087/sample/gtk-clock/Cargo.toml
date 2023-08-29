@@ -7,5 +7,4 @@ edition = "2021"
 
 [dependencies]
 chrono = "0.4.26"
-gdk-pixbuf = "0.18.0"
 gtk = "0.18.0"
